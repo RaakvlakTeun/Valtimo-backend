@@ -1,0 +1,80 @@
+{
+  "display": "form",
+  "components": [
+    {
+      "label": "Kinderen",
+      "reorder": false,
+      "addAnotherPosition": "bottom",
+      "layoutFixed": false,
+      "enableRowGroups": false,
+      "initEmpty": false,
+      "tableView": false,
+      "defaultValue": [
+        {
+          "voornaamAchternaam": "",
+          "uitwonend": "",
+          "geboortedatum": "00/00/0000"
+        }
+      ],
+      "validate": {
+        "minLength": "1",
+        "maxLength": "6"
+      },
+      "key": "kinderen",
+      "type": "datagrid",
+      "input": true,
+      "components": [
+        {
+          "label": "Voornaam + Achternaam",
+          "applyMaskOn": "change",
+          "tableView": true,
+          "key": "voornaamAchternaam",
+          "type": "textfield",
+          "input": true
+        },
+        {
+          "label": "Leeftijd",
+          "applyMaskOn": "change",
+          "mask": false,
+          "tableView": false,
+          "delimiter": false,
+          "requireDecimal": false,
+          "inputFormat": "plain",
+          "truncateMultipleSpaces": false,
+          "key": "leeftijd",
+          "type": "number",
+          "input": true
+        },
+        {
+          "label": "Uitwonend",
+          "widget": "choicesjs",
+          "tableView": true,
+          "data": {
+            "values": [
+              {
+                "label": "Ja",
+                "value": "true"
+              },
+              {
+                "label": "Nee",
+                "value": "false"
+              }
+            ]
+          },
+          "dataType": "boolean",
+          "key": "uitwonend",
+          "type": "select",
+          "input": true
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "label": "Submit",
+      "key": "submit",
+      "disableOnInvalid": true,
+      "input": true,
+      "tableView": false
+    }
+  ]
+}

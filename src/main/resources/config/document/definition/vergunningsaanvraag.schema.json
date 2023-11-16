@@ -40,6 +40,29 @@
                     "type": "boolean"
                 }
             }
+        },
+        "opmerking": {
+            "type": "string"
+        },
+        "kinderen": {
+            "type": "array",
+            "items": {
+                "type": "object",
+            "properties":{
+                "voornaamAchternaam": {
+                    "type": "string",
+                    "description": "voornaamAchternaam"
+                },
+                "uitwonend": {
+                    "type": "boolean",
+                    "description": "uitwonend"
+                },
+                "leeftijd": {
+                    "type": "number",
+                    "description": "leeftijd"
+                }
+             }
+            }
         }
     },
     "definitions": {
